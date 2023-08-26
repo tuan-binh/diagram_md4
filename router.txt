@@ -6,5 +6,59 @@ GET http:locohost8081:/hair    Điều hướng đến trang danh sách kiểu t
 GET http:locohost8081:/location Điều hướng đến trang các địa chỉ của cửa hàng cắt tóc
 GET http:locohost8081:/order    Điều hướng đến trang web đặt lịch cắt tóc
 GET http:locohost8081:/information Điều hướng đến trang thông tin cá nhân
+GET http:locohost8081:/favorite Điều hướng đến trang những kiểu tóc yêu thích
 GET http:locohost8081:/history Điều hướng đến trang lịch sử đặt lịch cắt tóc
 GET http:locohost8081:/ Điều hướng đến trang chủ và out khỏi tài khoản 
+
+POST http:locohost8081:/user/handleLogin Thực hiện hành động đăng nhập vào tài khoản
+POST http:locohost8081:/user/handleRegister Thực hiện hành động đăng ký tài khoản
+POST http:locohost8081:/user/handleChangeName Thực hiện hành động thay đổi tên
+POST http:locohost8081:/user/handleChangePassword Thực hiện hành động thây đổi mật khẩu
+POST http:locohost8081:/user/handleChangeAddress Thực hiện hành động cập nhật địa chỉ
+
+POST http:locohost8081:/handleOrder/handleOrderHasAccount Thực hiện đặt lịch đối với người dùng có tài khoản
+POST http:locohost8081:/handleOrder/handleOrderNoAccount Thực hiện đặt lịch đối với người dùng không có tài khoản
+GET http:locohost8081:/handleOrder/handleDelete/:id Thực hiện hủy kèo đặt lịch cắt tóc 
+GET http:locohost8081:/handleOrder/handleEdit/:id Thực hiện hành động lấy dữ liệu order và trả về view để thực hiện sửa lịch order
+POST http:locohost8081:/handleOrder/handleUpdateOrder Thực hiện hành động cập nhật lại order sau khi sửa 
+
+POST http:locohost8081:/handleReviews/review Thực hiện đánh giá sau khi cắt tóc xong 
+
+GET http:locohost8081:/hair/like/:id Thực hiện hành động thích ảnh kiểu tóc 
+GET http:locohost8081:/hair/delete/:id Thực hiện xóa ảnh kiểu tóc xong trang danh sách kiểu tóc yêu thích
+
+GET http:locohost8081:/admin  Thực hiện điều hướng sang trang chủ admin
+GET http:locohost8081:/admin/user Thực hiện chuyển hướng sang trang quản lý user
+GET http:locohost8081:/admin/barber Thực hiện điều hướng sang trang quản lý barber
+GET http:locohost8081:/admin/time Thực hiện điều hướng sang trang quản lý thời gian đặt lịch cắt tóc
+GET http:locohost8081:/admin/service Thực hiện điều hướng sang trang quản lý dịnh vụ của đặt lịch cắt tóc
+GET http:locohost8081:/admin/address Thưc hiện điều hướng sang trang quản lý địa chỉ của của hàng cắt tóc
+GET http:locohost8081:/admin/order Thực hiện sang trang điều hướng quản lý lịch đặt của khách có tài khoản va không có tài khoản
+GET http:locohost8081:/admin/hair Thực hiện điều hướng sang trang quản lý những hình ảnh trong trang những kiểu tóc yêu thích
+GET http:locohost8081:/admin/logout Thực hiện thoát khỏi tài khoản admin
+
+GET http:locohost8081:/handleAdmin/block/:id Thực hiện Khóa người dùng
+GET http:locohost8081:/hadnleAdmin/unlock/:id Thực hiện mở khóa người dùng
+GET http:locohost8081:/handleAdmin/layoffBarber/:id Thực hiện xa thải nhân viên cắt tóc
+GET http:locohost8081:/hadnleAdmin/inviteBarber/:id Thực hiện mở khóa nhân viên cắt tóc
+GET http:locohost8081:/handleAdmin/blockTime/:id Thực hiện khóa thời gian đặt lịch
+GET http:locohost8081:/handleAdmin/unlockTime/:id Thực hiện mở khóa thời gian đặt lịch
+GET http:locohost8081:/handleAdmin/blockService/:id Thực hiện khóa dịnh vụ đặt lịch
+GET http:locohost8081:/handleAdmin/unlockService/:id Thực hiện mở khóa dịnh vụ đặt lịch
+GET http:locohost8081:/handleAdmin/deleteAddress/:id Thực hiện xóa địa chỉ của hàng 
+GET http:locohost8081:/handleAdmin/confirmHasAccount/:id Thực hiện xác nhận order của người dùng có tài khoản
+GET http:locohost8081:/handleAdmin/confirmNoAccount/:id Thực hiện xác nhận order của người dùng không có tài khoản
+
+
+POST http:locohost8081:/handleUplaod/uploadHair Thực hiện thêm kiểu tóc yêu thích vào danh sách
+GET http:locohost8081:/handleUplaod/deleteImg/:id Thực hiện xóa ảnh kiểu tóc yêu thích
+POST http:locohost8081:/handleUpload/uploadAddress Thực hiện thêm địa chỉ cửa hàng cắt tóc
+POST http:locohost8081:/handleUpload/uploadService Thực hiện thêm dịnh vụ vào lịch đặt cắt tóc
+POST http:locohost8081:/handleUpload/uploadTime Thực hiện thêm thời gian vào lịch đặt
+POST http:locohost8081:/handleUpload/uploadBarber Thực hiện thêm thợ cắt tóc vào lịch
+
+
+
+
+
+
