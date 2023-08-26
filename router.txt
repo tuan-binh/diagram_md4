@@ -1,0 +1,10 @@
+GET http:locohost8081:/  Điều hướng đến trang chủ
+GET http:locohost8081:/signUp  Điều hướng đến trang đăng ký
+GET http:locohost8081:/signIn  Điều Hướng đến trang đăng nhập
+GET http:locohost8081:/service Điều hướng đến trang dịnh vụ
+GET http:locohost8081:/hair    Điều hướng đến trang danh sách kiểu tóc
+GET http:locohost8081:/location Điều hướng đến trang các địa chỉ của cửa hàng cắt tóc
+GET http:locohost8081:/order    Điều hướng đến trang web đặt lịch cắt tóc
+GET http:locohost8081:/information Điều hướng đến trang thông tin cá nhân
+GET http:locohost8081:/history Điều hướng đến trang lịch sử đặt lịch cắt tóc
+GET http:locohost8081:/ Điều hướng đến trang chủ và out khỏi tài khoản 
